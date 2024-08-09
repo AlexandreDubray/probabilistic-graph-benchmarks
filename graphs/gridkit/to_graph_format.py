@@ -137,5 +137,5 @@ for dataset in datasets:
     dataset_input = f'{continent}/{sub_region}'
     (nb_nodes, edges) = parse_dataset(dataset_input)
     with open(os.path.join('graphs', continent, f'{sub_region}.graph'), 'w') as f:
-        f.write(f'undirected {nb_nodes} {len(edges)}\n')
+        f.write(f'UNDIRECTED\n')
         f.write('\n'.join([f'{n1} {n2} {p}' for (n1, n2, p) in edges]))
